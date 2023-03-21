@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+userFrom
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <form [formGroup]="userFrom" (ngSubmit)="onSubmit(userFrom.value)">
+    <ion-item lines="full">
+      <ion-label position="floating">UserName</ion-label>
+      <ion-input type="text" formControlName="userName" class="form-control" placeholder =" Name"required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" formControlName="email" class="form-control" placeholder ="Email "required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Age</ion-label>
+      <ion-input type="text" formControlName="age" class="form-control" placeholder ="age "required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Mobile</ion-label>
+      <ion-input type="text" formControlName="phone" class="form-control" placeholder ="number "required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Date</ion-label>
+      <ion-input type="date" formControlName="date"  ></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+    <div class="ion-text-center">
+    <ion-button [routerLink]="['/view']" fill="clear" class="ion-text-center">Go to User List</ion-button>
+    </div>
+  </form>
+</ion-content>
